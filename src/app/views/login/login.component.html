@@ -1,0 +1,51 @@
+<div class="header">
+  <span class="title">
+    App<strong>Gov</strong>
+  </span>
+  <span class="subtitle">
+    Application Governance System
+  </span>
+</div>
+<mat-card class="login-card">
+  <mat-card-header>
+    <mat-card-title>Login</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <form [formGroup]="profileForm">
+      <div>
+          <mat-form-field appearance="outline">
+            <mat-label>Email</mat-label>
+            <input matInput type="text" placeholder="user@example.com"
+              formControlName="email">
+            <mat-icon matSuffix>person</mat-icon>
+            <mat-error *ngIf="getFormControl('email').hasError('email')
+              && !getFormControl('email').hasError('required')">
+              Please enter a <strong>valid email address</strong>
+            </mat-error>
+          </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field appearance="outline">
+          <mat-label>Password</mat-label>
+          <input matInput type="password" placeholder="************"
+            formControlName="password">
+          <mat-icon matSuffix>lock</mat-icon>
+        </mat-form-field>
+      </div>
+      <div>
+        <button mat-raised-button color="primary" [disabled]="profileForm.invalid">
+          Sign in
+        </button>
+      </div>
+    </form>
+  </mat-card-content>
+</mat-card>
+<div class="footer">
+  <h4>Or you may need</h4>
+  <div class="row">
+      <a mat-stroked-button routerLink="/register">Register</a>
+  </div>
+  <div class="row">
+      <button mat-stroked-button (click)="openDialog()">Forgot your password?</button>
+  </div>
+</div>

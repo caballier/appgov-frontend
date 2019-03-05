@@ -1,0 +1,58 @@
+div.header {
+  display: table;
+  margin: 20px auto;
+
+  span {
+    display: table-row;
+    padding-bottom: 10px;
+  }
+
+  .title {
+    font-size: 4.5em;
+  }
+  .subtitle {
+    font-size: 1.2em;
+    color: rgb(100, 100, 100);
+    word-break: break-all;
+    max-width: 400px;
+    margin-top: 10px;
+    display: inline-block;
+  }
+}
+
+.login-card {
+  max-width: 300px;
+  margin: auto;
+  padding: 20px;
+
+  .form {
+    display: table;
+    width: 100%;
+  }
+
+  .mat-form-field {
+    display: inline;
+  }
+
+  button {
+    margin: auto;
+    display: block;
+    min-width: 200px;
+    height: 40px;
+  }
+}
+
+div.footer {
+  display: table;
+  margin: auto;
+  text-align: center;
+
+  h4 {
+    color: rgb(158, 158, 158);
+  }
+
+  a, button {
+    min-width: 200px;
+    margin-bottom: 10px;
+  }
+}
